@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+<body>
+
+    <div class="container">
+        <header>
+            <a class="title" href="/blogs">The Romanov blog<h1>Hello this is my blog</h1></a>
+
+            <%- include('./partials/nav.ejs') %>
+        </header>
+
+
+        <h2>All blogs</h2>
+        <div class="blogs content">
+
+            <% if(blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
+            <a class="single" href="/blogs/<%= blog._id %>">
+                <h3 class="title"> <%= blog.title %> </h3>
+                <p class="snippet"> <%= blog.snippet %> </p>
+            </a>
+            <% }) %>
+            <% } else {%>
+            <p>No blogs to display</p>
+            <% } %>
+        </div>
+
+
+    </div>
+
+    <div class="container">
+        <%- include('./partials/footer.ejs') %>
+    </div>
+
+    <script>
+        var cardBlog = document.querySelectorAll('a.single');
+        const animait = () => {
+            anime({
+                targets: 'a.single',
+                translateX: [1050, 0],
+                easing: 'easeInOutCubic',
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', animait);
+    </script>
+
+</body>
+
+</html>

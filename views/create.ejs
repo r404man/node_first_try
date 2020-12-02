@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+<body>
+
+    <div class="container">
+        <header>
+            <a class="title" href="/blogs">The Romanov blog<h1>Hello this is my blog</h1></a>
+
+
+            <%- include('./partials/nav.ejs') %>
+        </header>
+    </div>
+
+    <div class="container">
+        <div class="form-text">
+            <h1>Create new post</h1>
+            <p>Ease to share with your community.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="create-blog content">
+            <form action="/blogs" method="POST">
+                <label for="title">Blog title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="snippet">Blog snippet:</label>
+                <input type="text" id="snippet" name="snippet" required>
+                <label for="body"> Blog body:</label>
+                <textarea name="body" required></textarea>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <%- include('./partials/footer.ejs') %>
+    </div>
+</body>
+
+</html>

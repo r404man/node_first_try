@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+<body>
+
+    <div class="container">
+        <header>
+            <a class="title" href="/blogs">The Romanov blog<h1>Hello this is my blog</h1></a>
+
+            <%- include('./partials/nav.ejs') %>
+        </header>
+        <div class="about-content">
+            <h2 class="about-heading">About us</h2>
+            <div class="about-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, cumque.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, cumque.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, cumque.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <%- include('./partials/footer.ejs') %>
+
+    </div>
+</body>
+
+</html>
